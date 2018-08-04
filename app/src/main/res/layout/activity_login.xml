@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="50dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/logotext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="150dp"
+        android:text="당신의 작은 도움이 세상을 바꿉니다." />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logotext">
+        <EditText
+            android:inputType="textEmailAddress"
+            android:hint="아이디"
+            android:layout_width="match_parent"
+            android:id="@+id/id"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutemail"
+        >
+        <EditText
+            android:inputType="textPassword"
+            android:hint="비밀번호"
+            android:layout_width="match_parent"
+            android:id="@+id/password"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_below="@id/layoutpassword"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_below="@id/loading"/>
+
+    <TextView
+        android:id="@+id/link_regist"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="회원가입"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
